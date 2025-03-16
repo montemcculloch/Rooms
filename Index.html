@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escape the Rooms</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="game-container">
+        <h1>Escape the Rooms</h1>
+        <p id="timer">Time Left: 30s</p>
+        <p id="score">Score: 0</p>
+        <img id="room-image" src="images/room1.jpg" alt="Room Image">
+        <p id="room-description">What is the main color of the object in the center?</p>
+        <input type="text" id="answer" placeholder="Enter your answer">
+        <button onclick="checkAnswer()">Submit</button>
+        <p id="message"></p>
+    </div>
+
+    <!-- Leaderboard -->
+    <div id="leaderboard" class="hidden">
+        <h2>🏆 Leaderboard</h2>
+        <ol id="leaderboard-list"></ol>
+        <button onclick="resetLeaderboard()">Reset Leaderboard</button>
+    </div>
+
+    <!-- Sound Effects & Background Music -->
+    <audio id="correct-sound" src="sounds/correct.mp3"></audio>
+    <audio id="wrong-sound" src="sounds/wrong.mp3"></audio>
+    <audio id="win-sound" src="sounds/win.mp3"></audio>
+    <audio id="bg-music" src="sounds/background.mp3" loop></audio>
+    
+    <button id="music-toggle" onclick="toggleMusic()">🎵 Play Music</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
